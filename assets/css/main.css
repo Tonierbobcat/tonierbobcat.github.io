@@ -2591,20 +2591,20 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
+
 		background-color: #1f1815;
-		background-attachment: scroll,								scroll;
-		/* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
-		background-image: url("images/overlay.png");
-		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-attachment: scroll;
+		background-position: top left;
+		background-repeat: repeat, no-repeat;
+		background-size: auto, 150%;
+
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
 		position: fixed;
 		text-align: right;
-		z-index: 1;
+	
 		top: 0;
 		width: 35%;
 	}
@@ -2645,7 +2645,7 @@ input, select, textarea {
 			width: 6.25em;
 		}
 
-		#header .video-container {
+		#header .background {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -2655,7 +2655,7 @@ input, select, textarea {
 			z-index: -1;
 		}
 		
-		#header-bg-video {
+		#background-video { /*For ANIMATED BACKGROUND*/
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -2665,7 +2665,7 @@ input, select, textarea {
 			pointer-events: none;
 		}
 		
-		#header .video-container .overlay {
+		#header .background .overlay {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -3112,11 +3112,9 @@ input, select, textarea {
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				/* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
-				background-image: url("images/overlay.png");
-				background-position: top left,						bottom center;
-				background-repeat: repeat,							no-repeat;
-				background-size: auto,							cover;
+				background-position: top left, bottom center;
+				background-repeat: repeat, no-repeat;
+				background-size: auto, cover;
 				bottom: auto;
 				left: auto;
 				padding: 4em 4em 6em 4em;
@@ -3148,7 +3146,6 @@ input, select, textarea {
 				padding: 6em 4em;
 				width: 100%;
 			}
-
 	}
 
 /* Small */
