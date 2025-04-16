@@ -26,34 +26,38 @@
 
 // Palette.
 	$palette: (
-		bg:					#fff,
-		fg:					#a2a2a2,
-		fg-bold:			#787878,
-		fg-light:			#b2b2b2,
-		border:				#efefef,
-		border-bg:			#f7f7f7,
-		border2:			#dfdfdf,
-		border2-bg:			#e7e7e7,
+		// Primary Background and Surface Colors
+		bg:                  #E2E7DD, // Light Alabaster background (soft, neutral)
+		fg:                  #4C4C4E, // Dark Davys Gray (primary text color)
+		fg-bold:             #303334, // Onyx (for bold text)
+		fg-light:            #A5B5AE, // Ash Gray (for light text, secondary content)
 
+		// Border Colors
+		border:              #53595D, // Davys Gray 2 (subtle border)
+		border-bg:           #C5C0A0, // Sage (background for borders)
+		border2:             #727338, // Reseda Green (darker border for contrast)
+		border2-bg:          #8D7B50, // Chamoisee (for background borders)
+
+		// Accent Colors
 		accent1: (
-			bg:				#49bf9d,
-			fg:				mix(#49bf9d, #ffffff, 25%),
-			fg-bold:		#ffffff,
-			fg-light:		mix(#49bf9d, #ffffff, 40%),
-			border:			rgba(255,255,255,0.25),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(255,255,255,0.5),
-			border2-bg:		rgba(255,255,255,0.2)
+			bg:              #8D7B50, // Chamoisee (earthy, warm tone accent)
+			fg:              #F2F0D7, // Soft light yellowish color (complement to warm brown)
+			fg-bold:         #4C4C4E, // Dark text for bold contrast
+			fg-light:        #F7F5E1, // Very light warm yellow for light text
+			border:          rgba(0, 0, 0, 0.1), // Subtle border for accent elements
+			border-bg:       rgba(0, 0, 0, 0.05), // Light background border for accent
+			border2:         rgba(0, 0, 0, 0.2), // Slightly darker border for accents
+			border2-bg:      rgba(0, 0, 0, 0.1) // Light background border for accent elements
 		),
 
 		accent2: (
-			bg:				#1f1815,
-			fg:				rgba(255,255,255,0.5),
-			fg-bold:		#ffffff,
-			fg-light:		rgba(255,255,255,0.4),
-			border:			rgba(255,255,255,0.25),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(255,255,255,0.5),
-			border2-bg:		rgba(255,255,255,0.2)
+			bg:              #727338, // Reseda Green (natural, earthy accent)
+			fg:              #F7F7F7, // Light white (for text contrast)
+			fg-bold:         #303334, // Onyx (for bold text)
+			fg-light:        #C5C0A0, // Sage (soft, light color for subtle text)
+			border:          rgba(0, 0, 0, 0.1), // Light border for contrast
+			border-bg:       rgba(0, 0, 0, 0.05), // Very light background border for accents
+			border2:         rgba(0, 0, 0, 0.2), // Slightly darker border for accent areas
+			border2-bg:      rgba(0, 0, 0, 0.1) // Soft background border for accent
 		)
 	);
