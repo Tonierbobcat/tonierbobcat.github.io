@@ -1,0 +1,117 @@
+{
+  "site": {
+    "title": "Logan | Portfolio",
+    "description": "Minecraft plugin developer, game developer, software developer and 3D artist."
+  },
+
+  "name": {
+    "first": "Logan",
+    "last": ""
+  },
+
+  "greeting": "Hello, I'm",
+  "tagline": "I enjoy making stuff.",
+  "avatar": "images/avatar.jpg",
+
+  "chips": [
+    "Minecraft plugins",
+    "Game dev",
+    "Software",
+    "3D models"
+  ],
+
+  "about": {
+    "heading": "A little about me",
+    "paragraphs": [
+      "I'm an aspiring software engineer studying computer science. I am a chef; My designs & work cannot be replaced. I am a cook; My work will be fully automated",
+      "My short-term goal is to collaborate on a major project with other developers.",
+      "My long-term goal is making something that people will see is worth while."
+    ],
+    "facts": [
+      { "label": "Studying", "value": "Computer science" },
+      { "label": "Favorite cuisine", "value": "East Asian" },
+      { "label": "Learning", "value": "3D Modeling" },
+      { "label": "Looking for", "value": "Teams to join" }
+    ]
+  },
+
+  "contact": {
+    "heading": "Let's build something together.",
+    "text": "Want to collaborate, or just say hi? My inbox is open.",
+    "links": [
+      { "label": "Email me", "url": "mailto:logan@loficostudios.com", "style": "primary" },
+      { "label": "GitHub", "url": "https://github.com/tonierbobcat", "style": "ghost" },
+      { "label": "Linkdin", "url": "https://www.linkedin.com/in/logan-o-627a42427", "style": "ghost" }
+    ]
+  },
+
+  "footer": {
+    "owner": "Logan & Lofi Coffee Studios",
+    "tagline": "made with motivation"
+  },
+  "workItems": [
+  {
+    "category": "minecraft",
+    "title": "Minecraft Party System",
+    "type": "Minecraft Plugin",
+    "description": "A party system that lets players create groups and play alongside bots.",
+    "image": "images/projects/party-system.jpg",
+    "symbol": "⌘",
+    "tags": ["Minecraft", "Java", "Systems"]
+  },
+  {
+    "category": "minecraft",
+    "title": "Minecraft Labs Minigame",
+    "type": "Minigame",
+    "description": "A last-player-standing minigame where randomized events keep every round unpredictable.",
+    "image": "images/projects/labs-minigame.jpg",
+    "symbol": "✳",
+    "tags": ["Minecraft", "Gameplay", "Events"]
+  },
+  {
+    "category": "minecraft",
+    "title": "Minecraft AI Companion",
+    "type": "AI Integration",
+    "description": "A follower companion integrated with an LLM, designed to understand its surroundings and the player's inventory.",
+    "image": "images/projects/ai-companion.jpg",
+    "symbol": "◈",
+    "tags": ["Minecraft", "LLM", "AI"]
+  },
+  {
+    "category": "software",
+    "title": "Aseprite to LibGDX Converter",
+    "type": "Developer Tool",
+    "description": "A utility that converts Aseprite sprite-sheet JSON into atlas files for the LibGDX Java framework.",
+    "image": "images/projects/aseprite-converter.jpg",
+    "symbol": "{ }",
+    "tags": ["Java", "LibGDX", "Tooling"]
+  },
+  {
+    "category": "games",
+    "title": "3D Character Menu Framework",
+    "type": "Interactive Framework",
+    "description": "A reusable 3D character menu intended for displaying characters in a gacha-style game interface.",
+    "image": "images/projects/character-menu.jpg",
+    "symbol": "◇",
+    "tags": ["3D", "UI", "Framework"]
+  },
+  {
+    "category": "games",
+    "title": "Plant Game",
+    "type": "Game Concept",
+    "description": "A botanical exploration concept about discovering plants, growing a garden, and unlocking decorations.",
+    "image": "images/projects/plant-game.jpg",
+    "symbol": "✿",
+    "tags": ["Exploration", "Gardening", "Design"]
+  },
+  {
+    "category": "models",
+    "title": "Your First 3D Model",
+    "type": "3D Model",
+    "description": "Swap this placeholder for a render of one of your models: low-poly props, characters, or Minecraft-style assets.",
+    "image": "images/projects/model-01.jpg",
+    "symbol": "▲",
+    "tags": ["3D", "Modeling", "Blender"]
+  }
+]
+}
