@@ -65,7 +65,7 @@ const workItems = [
     category: "minecraft",
     title: "Minecraft 3D Character Menu",
     type: "Gacha Character Menu Plugin",
-    description: "A reusable 3D character menu intended for displaying characters in a gacha-style game interface.",
+    description: "A reusable 3D character menu intended for displaying characters in a gacha-style minecraft ui.",
     image: "images/projects/07.png",
     symbol: "◇",
     tags: ["3D", "UI", "Framework"],
@@ -102,6 +102,15 @@ const workItems = [
     tags: ["3D", "Modeling", "Blender"],
     link: "https://skfb.ly/pOVr9",
     linkLabel: "View on Sketchfab"
+  },
+  {
+    category: "models",
+    title: "Pool Floaty",
+    type: "3D Model",
+    description: "Nothing besides a pool floaty. The only thing cool is the material set up. Made it in a few minutes for my portfolio pfp",
+    image: "images/projects/pfprenderuncompressed.png",
+    symbol: "▲",
+    tags: ["3D", "Modeling", "Blender"]
   }
 ];
 
