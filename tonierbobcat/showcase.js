@@ -6,7 +6,32 @@
     symbol       shown on the fallback tile
     link         OPTIONAL. A URL (https://...) for the project: repo, Sketchfab, demo...
     linkLabel    OPTIONAL. Button text for the link (default: "View project")
+    date         OPTIONAL. When you made it. Use "2026", "2026-03" or "2026-03-14"
+                 and it is shown as "2026", "Mar 2026" or "Mar 14, 2026".
+                 Any other text (e.g. "Summer 2025", "Ongoing") is shown as written.
 */
+
+// Turns "2026-03-14" / "2026-03" / "2026" into a nice label, and leaves other text alone.
+// Parsed by hand (not with new Date) so time zones can never shift the day.
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function formatDate(raw) {
+  const text = String(raw || "").trim();
+  if (!text) return null;
+
+  const match = text.match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/);
+  if (!match) return { label: text, iso: null };
+
+  const year = Number(match[1]);
+  const month = match[2] ? Number(match[2]) : null;
+  const day = match[3] ? Number(match[3]) : null;
+  if (month !== null && (month < 1 || month > 12)) return { label: text, iso: null };
+  if (day !== null && (day < 1 || day > new Date(year, month, 0).getDate())) return { label: text, iso: null };
+
+  if (month === null) return { label: String(year), iso: String(year) };
+  if (day === null) return { label: `${MONTHS[month - 1]} ${year}`, iso: text };
+  return { label: `${MONTHS[month - 1]} ${day}, ${year}`, iso: text };
+}
 const workItems = [
   // {
   //   category: "minecraft",
@@ -76,6 +101,7 @@ const workItems = [
     category: "games",
     title: "Melody Suite",
     type: "Package Suite",
+    date: "2026-10-4",
     description: "A suite of my own game systems to reduce boilerplate when making games and to help prototype faster",
     link: "https://github.com/Tonierbobcat/Melody-Suite",
     linkLabel: "View on GitHub",
@@ -101,6 +127,7 @@ const workItems = [
     symbol: "▲",
     tags: ["3D", "Modeling", "Blender"],
     link: "https://skfb.ly/pOVr9",
+    date: "2026-10-15",
     linkLabel: "View on Sketchfab"
   },
   {
@@ -110,8 +137,19 @@ const workItems = [
     description: "Nothing besides a pool floaty. The only thing cool is the material set up. Made it in a few minutes for my portfolio pfp",
     image: "images/projects/pfprenderuncompressed.png",
     symbol: "▲",
+      date: "2026-10-15",
     tags: ["3D", "Modeling", "Blender"]
-  }
+  }, 
+  {
+    category: "models",
+    title: "Mona",
+    type: "3D Model",
+    description: "This took eight hours. no tutorials, only a reference. I thought this came out good. However, there are some weird lighting issues near the hips.",
+    image: "images/projects/monaexport.png",
+    symbol: "▲",
+    date: "2026-10-16",
+    tags: ["3D", "Modeling", "Blender", "Genshin", "Mona"]
+  }, 
 ];
 
 function makeProjectCard(item, index) {
@@ -152,6 +190,16 @@ function makeProjectCard(item, index) {
   type.className = "project-type";
   type.textContent = item.type;
   meta.appendChild(type);
+
+  // Optional date, shown at the right of the type line.
+  const when = formatDate(item.date);
+  if (when) {
+    const date = document.createElement("time");
+    date.className = "project-date";
+    date.textContent = when.label;
+    if (when.iso) date.dateTime = when.iso;
+    meta.appendChild(date);
+  }
 
   const title = document.createElement("h4");
   title.textContent = item.title;
