@@ -144,7 +144,7 @@ const workItems = [
     category: "models",
     title: "Mona",
     type: "3D Model",
-    description: "This took eight hours. no tutorials, only a reference. I thought this came out good. However, there are some weird lighting issues near the hips.",
+    description: "This took eight hours. no tutorials, only a reference. I think that this came out pretty good.",
     image: "images/projects/monaexport.png",
     symbol: "▲",
     date: "2026-10-16",
